@@ -3,6 +3,14 @@ import App from './App.vue'
 
 Vue.config.productionTip = false
 
+// new Vue({
+//   render: h => h(App),
+// }).$mount('#app')
+
 new Vue({
+  el:'#app',
   render: h => h(App),
-}).$mount('#app')
+  beforeCreate() {
+    Vue.prototype.$bus = this //数据总线
+  },
+})
