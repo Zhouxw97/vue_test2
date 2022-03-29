@@ -11,6 +11,6 @@ new Vue({
   el:'#app',
   render: h => h(App),
   beforeCreate() {
-    Vue.prototype.$bus = this //数据总线
+    Vue.prototype.$bus = this //安装数据总线
   },
 })
