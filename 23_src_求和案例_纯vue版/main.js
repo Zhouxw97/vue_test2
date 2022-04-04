@@ -1,8 +1,6 @@
 import Vue from 'vue'
-import vueResource from 'vue-resource'
 import App from './App.vue'
-import store from './store'
-
+import vueResource from 'vue-resource'
 
 Vue.config.productionTip = false
 
@@ -10,11 +8,9 @@ Vue.config.productionTip = false
 //   render: h => h(App),
 // }).$mount('#app')
 Vue.use(vueResource)
-
 new Vue({
   el:'#app',
   render: h => h(App),
-  store,
   beforeCreate() {
     Vue.prototype.$bus = this //安装数据总线
   },
